@@ -1,0 +1,11 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "docs",
+    srcs = [
+        "card.go",
+        "user.go",
+    ],
+    importpath = "github.com/donkeyroll-shouting/valentinescards/pkg/firestore/docs",
+    visibility = ["//visibility:public"],
+)

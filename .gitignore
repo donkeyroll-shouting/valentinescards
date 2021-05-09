@@ -1,3 +1,6 @@
+# Important service account keys
+serviceaccountkeys/
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -12,4 +15,10 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+
+# Bazel
+bazel-bin/
+bazel-out/
+bazel-testlogs/
+bazel-valentinescards/
