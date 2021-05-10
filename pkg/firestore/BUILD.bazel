@@ -1,18 +1,12 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
-
-go_binary(
-    name = "firestore",
-    embed = [":firestore_lib"],
-    visibility = ["//visibility:public"],
-)
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 go_library(
     name = "firestore_lib",
-    srcs = ["firestore.go"],
+    srcs = ["card_manager.go"],
     importpath = "github.com/donkeyroll-shouting/valentinescards/pkg/firestore",
     visibility = ["//visibility:private"],
     deps = [
+        "//pkg/firestore/docs",
         "//vendor/cloud.google.com/go/firestore",
-        "//vendor/google.golang.org/api/option",
     ],
 )
